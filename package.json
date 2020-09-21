@@ -6,12 +6,12 @@
     "vue-slide-valid",
     "slide-valid"
   ],
-  "main": "dist/password-input.umd.min.min.js",
+  "main": "dist/slide-valid.umd.min.js",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lib": "vue-cli-service build --target lib --name password-input --dest dist lib/index.js",
+    "lib": "vue-cli-service build --target lib --name slide-valid --dest dist lib/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
