@@ -6,5 +6,8 @@ module.exports = {
       template: 'public/index.html',
       filename: 'index.html'
     }
+  },
+  css: {// 不分离css样式
+    extract: false
   }
 }
