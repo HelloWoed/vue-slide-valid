@@ -54,7 +54,7 @@ export default {
     loginRules(){
       return {
         isValid: [
-          {require: true,message: '请滑动验证',trigger: 'change'}
+          {required: true,message: '请滑动验证',trigger: 'change'}
         ]
       }
     }
