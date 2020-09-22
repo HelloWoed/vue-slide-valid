@@ -1,24 +1,46 @@
 # vue-slide-valid
 
-## Project setup
+## 安装
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+npm i vue-slide-valid
 ```
 
-### Compiles and minifies for production
-```
-npm run build
+### 引入
+```javascript
+//main.js
+import slideValid from 'vue-slide-valid';
+
+Vue.use(slideValid);
 ```
 
-### Lints and fixes files
+### 使用
+```html
+<!-- 配合form表单使用，可以结合常见form组件的校验进行验证,也可以单独使用，支持v-model -->
+<el-form-item prop="verifycode">
+    <slide-valid v-model
+    v-model="loginForm.verifycode"
+    :startText="startText" 
+    :successText="successText" />
+</el-form-item>
 ```
-npm run lint
+```javascript
+...
+data(){
+    return {
+      loginForm:{},
+      startText: '请拖住滑块，拖动到最右边',
+      successText: '验证成功'
+    }
+},
+computed:{
+    loginRules(){
+      return {
+        isValid: [
+          {require: true,message: '请滑动验证',trigger: 'change'}
+        ]
+      }
+    }
+},
+...
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

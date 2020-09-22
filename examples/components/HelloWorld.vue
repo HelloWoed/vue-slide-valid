@@ -20,7 +20,7 @@
                   v-model="loginForm.password"
                   ></el-input>
           </el-form-item>
-          <el-form-item prop="verifycode">
+          <el-form-item prop="isValid">
               <slide-valid 
               v-model="loginForm.verifycode"
               :startText="startText" 
@@ -47,8 +47,16 @@ export default {
     return {
       loginForm:{},
       startText: '请拖住滑块，拖动到最右边',
-      successText: '验证成功',
-      loginRules: {}
+      successText: '验证成功'
+    }
+  },
+  computed:{
+    loginRules(){
+      return {
+        isValid: [
+          {require: true,message: '请滑动验证',trigger: 'change'}
+        ]
+      }
     }
   },
   methods:{
