@@ -22,7 +22,7 @@
           </el-form-item>
           <el-form-item prop="isValid">
               <slide-valid 
-              v-model="loginForm.verifycode"
+              v-model="loginForm.isValid"
               :startText="startText" 
               :successText="successText" />
           </el-form-item>

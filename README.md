@@ -18,7 +18,7 @@ Vue.use(slideValid);
 <!-- 配合form表单使用，可以结合常见form组件的校验进行验证,也可以单独使用，支持v-model -->
 <el-form-item prop="isValid">
     <slide-valid v-model
-    v-model="loginForm.verifycode"
+    v-model="loginForm.isValid"
     :startText="startText" 
     :successText="successText" />
 </el-form-item>
